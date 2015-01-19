@@ -11,7 +11,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/work-styles.css" />
 
     <!-- JavaScript -->
       
@@ -30,23 +30,23 @@
     <![endif]-->
   </head>
 <body>
-<header class="work-header">
+<header>
   <div class="content">
     <hgroup>
       <h1>Cori Tanck</h1>
-      <i>Interior Designer</i>
+      <h4>Interior Designer</h4>
     </hgroup>
   </div>
   <div class="overlay"></div>
 </header>
-<section class="site">
-  <nav>
+<section class="site-two">
+  <div class="social-nav">
     <a href="index.html">Home</a>
     <a href="http://linkedin.com/pub/cori-tanck/24/218/326">LinkedIn</a>
     <a href="work.html">Work</a>
     <a href="tel:+15612544959">Contact</a>
     <a href="mailto:coritanck@gmail.com?subject=Hey%20Cori!">Email</a>
-  </nav>
+  </div>
 
    <h1> My work </h1>
 
@@ -83,36 +83,79 @@
               <li><a href="#"><img src="img/cori-port26.jpg" alt="img26"/></a></li>
           </ul>
           
-            <div class="arrows">
-              <span class="cbp-fwprev" style=""><</span>
-              <span class="cbp-fwnext">></span>
-            </div>
-
+          
       </div>
     </div> 
+
   
-  <script src="js/slider.js"></script>
-  <script>
-      $( function() {
-        /*
-        - how to call the plugin:
-        $( selector ).cbpFWSlider( [options] );
-        - options:
-        {
-          // default transition speed (ms)
-          speed : 500,
-          // default transition easing
-          easing : 'ease'
-        }
-        - destroy:
-        $( selector ).cbpFWSlider( 'destroy' );
-        */
+                  <script src="js/slider.js"></script>
+                  <script> $( '#cbp-fwslider' ).cbpFWSlider();</script>
 
-        $( '#cbp-fwslider' ).cbpFWSlider();
+  <footer class="work-footer"> 
+            <ul class="share"> 
+              
+              <li>
+                  <a href="http://facebook.com/com" id="social-link">  
+                  <i class="fa fa-facebook"></i>
+                      <div class="nav-label">
+                          <span></span>
+                      </div>
+                  </a>
+              </li>
+             
+              <li>
+                  <a href="https://pinterest.com/coritanck" id="social-link">  
+                  <i class="fa fa-pinterest"></i>
+                      <div class="nav-label">
+                          <span></span>
+                      </div>
+                  </a>
+              </li> 
+             
+                <li>
+                  <a href="https://www.linkedin.com/pub/cori-tanck/24/218/326" id="social-link">
+                      <i class="fa fa-linkedin"></i>
+                                <div class="nav-label">
 
-      } );
-    </script>
+                         <span></span>
+                      </div>
+                  </a>
+              </li>
 
+              <li>
+                 
+                  <a href="http://instagram.com/itscoritanck" id="social-link">  
+                      <i class="fa fa-instagram"></i>
+                                <div class="nav-label">
+
+                          <span></span>
+                      </div>
+                  </a>
+              </li>
+             
+               <li>
+                  <a href="mailto:coritanck@gmail.com?Subject=Lets%20work%20together" target="_top" id="social-link">  
+                    <i class="fa fa-envelope"></i>
+                      <div class="nav-label">
+                          <span></span>
+                      </div>
+                  </a>
+              </li>
+
+              
+               <li>
+                  <a href="tel:+15612544959" id="social-link">  
+                  <i class="fa fa-mobile"></i>
+                      <div class="nav-label">
+                          <span></span>
+                      </div>
+                  </a>
+                </li>
+            </ul>
+      Built by <a <!-- style="padding-bottom: 10px -->" href="http://gregpfaff.com"> Greg Pfaff </a>
+
+    </footer>
+      </br>
   </section>
 
 

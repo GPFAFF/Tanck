@@ -53,9 +53,9 @@ Scroller.prototype = {
       , blurScroll = currentScrollY * 2
       , opaScroll = 1.4 - currentScrollY / 400;
    if(currentScrollY > wHeight)
-     $('nav').css('position','fixed');
+     $('.social-nav').css('position','fixed');
    else
-     $('nav').css('position','absolute');
+     $('.social-nav').css('position','absolute');
     
     $content.css({
       'transform'         : 'translateY(' + slowScroll + 'px)',
