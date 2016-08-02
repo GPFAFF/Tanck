@@ -67,11 +67,16 @@ header .overlay {
   opacity: 0;  -webkit-filter: blur(4px);
 }
 img{
-  margin-right:20px
+  width: 25%;
+  object-fit: cover;
+}
+img.work_showcase{
+  margin-right:20px;
+  width: 100%;
 }
 .site {
   padding: 2em 0;
-  text-align: center;
+  text-align: left;
   background-color: #efefef;
   font-size: .8em;
   color: #444;
@@ -79,16 +84,7 @@ img{
   height: auto;
   z-index: 3;
 }
-.site {
-  padding: 2em 0;
-  text-align: center;
-  background-color: #efefef;
-  font-size: .8em;
-  color: #444;
-  position:relative;
-  height: auto;
-  z-index: 3;
-}
+
 .site a {
   color: #666;
   text-decoration: none;
@@ -106,11 +102,12 @@ img{
   background:#222;
   width:100%;
   z-index:1;
+  text-align: center;
 }
 .site .social-nav a{
   padding:10px 30px;
   font-size:1.3em;
-  display:inline-block
+  display:inline-block;
 }
 .site .social-nav a:hover{
   background:#333;
@@ -124,31 +121,31 @@ img{
   width: 70%;
   padding: 40px;
 }
-h1{
-  font-size:2em;
-  margin: 4em 0px;
+.showcase_container{
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 }
+h1{
+  font-size: 2em;
+  margin: 2em 0;
+  text-align: center;
+}
+
 .aside {
     margin: 0px auto;
-    height: 700px;
+    height: auto;
     text-align: center;
     width: 80%;
 }
 .site .about-me{
-width: 50%;
-text-align: center;
-margin: 0px 145px;
-float: right;
-}
-.arrows{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: none repeat scroll 0% 0% #222;
     width: 100%;
+    text-align: center;
+    margin: 0px;
+    float: right;
 }
 .resume{
-  margin: 100px auto;
+  margin: 0px auto;
   width: 70%;
   background-color: #ccc;
   opacity: 0.9;
@@ -169,14 +166,19 @@ width: 30px;
 height: 30px;
 }
 .share {
-  left: 0;
-  top: 60%;
   list-style-type: none;
-  margin: 0;
-  padding: 30px;
+  margin: 20px 0;
   z-index: 10;
   max-width: 100%;
   text-align: center;
+}
+.developer_plug {
+  text-align: center;
+}
+.visually-hidden {
+  position: absolute; 
+  top: -9999px;
+  left: -9999px;
 }
 
 .share li {
@@ -192,7 +194,6 @@ height: 30px;
   width: 50px;
   height: 60px;
   padding: 15px 20px;
-  margin-bottom: 40px;
 }
 
 .share li #social-link .nav-label {
@@ -228,12 +229,108 @@ height: 30px;
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
+/*PHOTO SLIDER*/
+.cbp-fwslider {
+    overflow: hidden;
+    width: 85%;
+    max-width: 85%;
+    position: relative;
+    height: auto;
+    margin: 0px auto;
+}
+
+ 
+.cbp-fwslider ul {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    list-style-type: none;
+}
+ 
+.cbp-fwslider ul li {
+    transform: translateZ(0);
+    float: left;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+ 
+.cbp-fwslider ul li > a,
+.cbp-fwslider ul li > div {
+    display: block;
+    text-align: center;
+    outline: none;
+}
+ 
+.cbp-fwslider ul li > a img {
+    border: none;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+
+}
+ 
+.cbp-fwslider nav span {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 100px;
+    color: #ccc;
+    font-size: 50px;
+    text-align: center;
+    margin-top: -50px;
+    line-height: 100px;
+    cursor: pointer;
+    font-weight: normal;
+}
+ .cbp-fwslider nav span:hover{
+  color: black;
+  transition: 0.5s ease;
+ }
+.cbp-fwslider nav span.cbp-fwnext {
+    right: 0px;
+}
+ 
+.cbp-fwslider nav span.cbp-fwprev {
+    left: 0px;
+}
+ 
+.cbp-fwdots {
+    position: absolute;
+    bottom: 0px;
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+ 
+.cbp-fwdots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ddd;
+    margin: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+ 
+.cbp-fwdots span:hover {
+    background: #999;
+}
+ 
+.cbp-fwdots span.cbp-fwcurrent {
+    background: #ccc;
+    box-shadow: 0 0 0 2px black;
+    transition: box-shadow 0.2s ease-in-out;
+}
 @media screen and (max-width: 773px){
   .site .social-nav a{
     font-size: 1em;
   }
 }
 @media screen and (max-width: 600px){
+  h1 {
+    margin: 1em 0;
+  }
   .site .social-nav{
     width: 100%;
   }
@@ -243,13 +340,13 @@ height: 30px;
   display: inline-block;
 }
 blockquote{
-  font-size: 14px;
+  font-size: 20px;
   padding: 20px;
   margin: 0 auto;
 }
 .site .about-me{
   padding: 30px;
-   width: auto;
+  width: auto;
   margin: 0 auto;
 
 }
@@ -264,12 +361,12 @@ blockquote{
 }
 .share{
   padding: 0;
+  margin-top: 20px;
 }
 .share li #social-link {
     cursor: pointer;
     font-size: 25px;
     height: 60px;
-    margin-bottom: 40px;
     padding: 0px;
     display: inline-block;
 }
@@ -286,5 +383,26 @@ blockquote{
     padding: 0px 20px;
     white-space: nowrap;
     z-index: 4;
+}
+.cbp-fwslider{
+  width: 100%;
+  max-width: 100%;
+}
+.cbp-fwdots {
+   display: none;
+}
+.cbp-fwslider nav span.cbp-fwnext {
+    right: -10px;
+    font-size: 25px;
+    color: black;
+}
+ 
+.cbp-fwslider nav span.cbp-fwprev {
+    left: -10px;
+    font-size: 25px;
+    color: black;
+}
+img.work_showcase{
+  width: 100%;
 }
 }

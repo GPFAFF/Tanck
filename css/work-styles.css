@@ -6,7 +6,6 @@ html, body {
   height: 100%;
 }
 
-
 html {
   font: 1em/1.5 "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -69,7 +68,8 @@ header .overlay {
   opacity: 0;  -webkit-filter: blur(4px);
 }
 img{
-  margin-right:20px
+  margin-right:20px;
+  width: 100%;
 }
 .site-two {
   padding: 2em 0;
@@ -78,7 +78,7 @@ img{
   font-size: .8em;
   color: #444;
   position:relative;
-  height: 1400px;
+  height: auto;
   z-index: 3;
 }
 .site-two a {
@@ -118,17 +118,23 @@ img{
 }
 h1{
   font-size:2em;
-  margin: 4em 0px;
+  margin: 2em 0px;
 }
 .clear{
   clear: both;
 }
 .work-footer{
-  position: absolute;
-  bottom: 0;
-  margin: 0 auto;
+  display: block;
   width: 100%;
   padding-bottom: 20px;
+}
+.developer_plug {
+  text-align: center;
+}
+.visually-hidden {
+  position: absolute; 
+  top: -9999px;
+  left: -9999px;
 }
 /*PHOTO SLIDER*/
 .cbp-fwslider {
@@ -233,8 +239,6 @@ width: 30px;
 height: 30px;
 }
 .share {
-  left: 0;
-  top: 60%;
   list-style-type: none;
   margin: 0;
   padding: 30px;
@@ -256,7 +260,6 @@ height: 30px;
   width: 50px;
   height: 60px;
   padding: 15px 20px;
-  margin-bottom: 40px;
 }
 
 .share li #social-link .nav-label {
@@ -296,7 +299,7 @@ height: 30px;
 }
 @media screen and (max-width: 600px){
 .site-two{
-    height: 800px;
+    height: auto;
   }
 .site-two .social-nav{
     width: 100%;
@@ -318,7 +321,7 @@ h1 {
     cursor: pointer;
     font-size: 25px;
     height: 60px;
-    margin-bottom: 40px;
+    margin-top: 20px;
     padding: 0px;
     display: inline-block;
 }
@@ -353,6 +356,9 @@ h1 {
     left: -10px;
     font-size: 25px;
     color: black;
+}
+img{
+  width: 100%;
 }
 
 

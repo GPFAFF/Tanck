@@ -20,15 +20,33 @@
 		this._init( options );
 	};
 
-	// the options
+	/*// the options
 	$.CBPFWSlider.defaults = {
 		// default transition speed (ms)
-		speed : 500,
+		speed : 1000,
 		// default transition easing
 		easing : 'ease'
-	};
+
+	};*/
+
+
 
 	$.CBPFWSlider.prototype = {
+		autoplay: function () {
+		    if ((this.current) == (this.itemsCount - 1)) {
+		        this.current = -1;
+		    } else {
+		        this._navigate('next');
+		    }
+		},
+		interval: function () {
+		    var that = this;
+		    setInterval(function () {
+		        return that.autoplay();
+		    }, 7000);
+		},
+	
+
 		_init : function( options ) {
 			// options
 			this.options = $.extend( true, {}, $.CBPFWSlider.defaults, options );
@@ -184,6 +202,13 @@
 			this._slide();
 
 		},
+		prevent : function(){
+			  if ("#cbp-fwslider a") object.onClick = function(event){
+   event.preventDefault();
+   var href = $(this).attr("href");
+   console.log(href);
+		}
+	},
 		destroy : function() {
 
 			if( this.itemsCount > 1 ) {
@@ -235,5 +260,34 @@
 		}
 		return this;
 	};
+
+
+var mouseEnteredSlider = false;
+    
+    $(document).ready(function () {
+    
+        $('#cbp-fwslider').cbpFWSlider({
+            // default transition speed (ms)
+            speed: 1000,
+            // default transition easing
+            easing: 'ease'
+        }).mouseenter(function () {
+            mouseEnteredSlider = true;
+        }).mouseleave(function () {
+            mouseEnteredSlider = false;
+        });
+    
+        setInterval(function () {
+            if (!mouseEnteredSlider) {
+                if ($('.cbp-fwnext').css('display') != 'none') {
+                    $('.cbp-fwnext').click();
+                } else {
+                    $('.cbp-fwdots span:first-child').click();
+                }
+            }
+        }, 7000);
+    
+    });
+
 
 } )( jQuery, window );
